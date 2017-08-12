@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:35:34 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 404 949 http-bio-8080-exec-1 2132
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:37:22 -0700] "GET /ReceiptRepoREST/rest/accounts/1 HTTP/1.1" 404 949 http-bio-8080-exec-3 8
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:43:35 -0700] "GET /ReceiptRepoREST/rest/accounts/1 HTTP/1.1" 404 949 http-bio-8080-exec-5 8
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:43:38 -0700] "GET /ReceiptRepoREST/rest/accounts/ HTTP/1.1" 404 949 http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:43:41 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 404 949 http-bio-8080-exec-7 4
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:44:34 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 404 949 http-bio-8080-exec-1 2620
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:46:55 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 404 949 http-bio-8080-exec-1 2248
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:49:52 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 404 949 http-bio-8080-exec-1 2185
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:11:51:31 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 500 9612 http-bio-8080-exec-1 932
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:15:55:11 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 500 9612 http-bio-8080-exec-1 932
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:16:02:35 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 500 9612 http-bio-8080-exec-2 284
+0:0:0:0:0:0:0:1 - - [23/Jul/2017:16:26:46 -0700] "GET /ReceiptRepoREST/rest/accounts HTTP/1.1" 200 37 http-bio-8080-exec-1 2086

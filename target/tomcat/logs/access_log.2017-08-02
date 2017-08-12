@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [02/Aug/2017:21:23:36 -0700] "GET /ReceiptRepoREST/rest/accounts/ HTTP/1.1" 200 179 http-bio-8080-exec-1 2608
+192.168.0.3 - - [02/Aug/2017:21:48:41 -0700] "GET /ReceiptRepoREST/rest/accounts/ HTTP/1.1" 200 181 http-bio-8080-exec-3 19
+192.168.0.3 - - [02/Aug/2017:21:48:50 -0700] "GET /ReceiptRepoREST/rest/accounts/ HTTP/1.1" 200 181 http-bio-8080-exec-4 9
+192.168.0.3 - - [02/Aug/2017:23:56:00 -0700] "POST /ReceiptRepoREST/rest/accounts/ HTTP/1.1" 201 145 http-bio-8080-exec-1 1414
+0:0:0:0:0:0:0:1 - - [02/Aug/2017:23:56:06 -0700] "GET /ReceiptRepoREST/rest/accounts/ HTTP/1.1" 200 313 http-bio-8080-exec-3 28

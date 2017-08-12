@@ -1,0 +1,12 @@
+rrr\core\services\util\AccountList.class
+rrr\core\repositories\ReceiptRepo.class
+rrr\rest\resources\FoldersResource.class
+rrr\rest\resources\ReceiptListResource.class
+rrr\core\services\impl\ReceiptServiceImpl.class
+rrr\core\repositories\jpa\JpaReceiptRepo.class
+rrr\rest\resources\asm\FoldersResourceAsm.class
+rrr\rest\resources\AccountResource.class
+rrr\rest\resources\AccountListResource.class
+rrr\rest\resources\asm\ReceiptListResourceAsm.class
+rrr\core\services\impl\AccountServiceImpl.class
+rrr\rest\resources\asm\AccountListResourceAsm.class
