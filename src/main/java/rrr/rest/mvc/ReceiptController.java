@@ -91,7 +91,7 @@ public class ReceiptController {
             Receipt rec = sentReceipt.toReceipt();
             createdReceipt = service.createReceipt(accountId, rec);
             if (createdReceipt.getFolders() != null && createdReceipt.getFolders().length() > 0)
-                createdReceipt.setFolders(createdReceipt.getFolders() + '\n');
+                createdReceipt.setFolders(createdReceipt.getFolders().replaceAll(",", "\n") + '\n');
 
             boolean newFolders = createdReceipt.updateOwnersFolders(createdReceipt.parseFoldersField());
 

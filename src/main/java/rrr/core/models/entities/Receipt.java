@@ -126,7 +126,7 @@ public class Receipt {
             int found = index;
             int pre = 0;
             while(found != -1) {
-                String parse = substring.substring(pre, index);
+                String parse = substring.substring(pre, index).trim();
                 String rest = substring.substring(index+1, substring.length());
                 System.out.println(parse);
                 results.add(parse);
