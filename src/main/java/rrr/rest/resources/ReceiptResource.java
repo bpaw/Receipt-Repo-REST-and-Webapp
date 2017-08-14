@@ -17,11 +17,11 @@ public class ReceiptResource extends ResourceSupport {
 
     private Account owner;
 
-    private int tax;
+    private float tax;
 
-    private int tip;
+    private float tip;
 
-    private int total;
+    private float total;
 
     private String description;
 
@@ -45,27 +45,27 @@ public class ReceiptResource extends ResourceSupport {
         this.date = date;
     }
 
-    public int getTax() {
+    public float getTax() {
         return tax;
     }
 
-    public void setTax(int tax) {
+    public void setTax(float tax) {
         this.tax = tax;
     }
 
-    public int getTip() {
+    public float getTip() {
         return tip;
     }
 
-    public void setTip(int tip) {
+    public void setTip(float tip) {
         this.tip = tip;
     }
 
-    public int getTotal() {
+    public float getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(float total) {
         this.total = total;
     }
 
