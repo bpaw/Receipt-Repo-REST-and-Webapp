@@ -26,11 +26,11 @@ public class Receipt {
 
     private String date;
 
-    private float tax;
+    private double tax;
 
-    private float tip;
+    private double tip;
 
-    private float total;
+    private double total;
 
     private String description;
 
@@ -54,27 +54,27 @@ public class Receipt {
         this.date = date;
     }
 
-    public float getTax() {
+    public double getTax() {
         return tax;
     }
 
-    public void setTax(float tax) {
+    public void setTax(double tax) {
         this.tax = tax;
     }
 
-    public float getTip() {
+    public double getTip() {
         return tip;
     }
 
-    public void setTip(float tip) {
+    public void setTip(double tip) {
         this.tip = tip;
     }
 
-    public float getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(float total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 

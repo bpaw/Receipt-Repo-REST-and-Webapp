@@ -11,17 +11,19 @@ import java.net.URL;
  */
 public class ReceiptResource extends ResourceSupport {
 
+    private Long rid;
+
     private String receipt;
 
     private String date;
 
     private Account owner;
 
-    private float tax;
+    private double tax;
 
-    private float tip;
+    private double tip;
 
-    private float total;
+    private double total;
 
     private String description;
 
@@ -45,27 +47,27 @@ public class ReceiptResource extends ResourceSupport {
         this.date = date;
     }
 
-    public float getTax() {
+    public double getTax() {
         return tax;
     }
 
-    public void setTax(float tax) {
+    public void setTax(double tax) {
         this.tax = tax;
     }
 
-    public float getTip() {
+    public double getTip() {
         return tip;
     }
 
-    public void setTip(float tip) {
+    public void setTip(double tip) {
         this.tip = tip;
     }
 
-    public float getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(float total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 
@@ -101,6 +103,14 @@ public class ReceiptResource extends ResourceSupport {
         this.photo = photo;
     }
 
+    public Long getRid() {
+        return rid;
+    }
+
+    public void setRid(Long rid) {
+        this.rid = rid;
+    }
+
     public Receipt toReceipt() {
         Receipt receipt = new Receipt();
         receipt.setReceipt(getReceipt());
@@ -112,6 +122,8 @@ public class ReceiptResource extends ResourceSupport {
         receipt.setOwner(getOwner());
         receipt.setFolders(getFolders());
         receipt.setPhoto(getPhoto());
+        receipt.setDate(getDate());
+        receipt.setId(getRid());
         return receipt;
     }
 }

@@ -88,6 +88,12 @@ public class ReceiptController {
     ) {
         Receipt createdReceipt = null;
         try {
+            if (sentReceipt.getDate() != null) {
+                System.out.println(sentReceipt.getDate());
+                System.out.println(sentReceipt.getDate().indexOf('T'));
+                sentReceipt.setDate(sentReceipt.getDate().substring(0, sentReceipt.getDate().indexOf('T')));
+                System.out.println(sentReceipt.getDate());
+            }
             Receipt rec = sentReceipt.toReceipt();
             createdReceipt = service.createReceipt(accountId, rec);
             if (createdReceipt.getFolders() != null && createdReceipt.getFolders().length() > 0)
@@ -98,10 +104,15 @@ public class ReceiptController {
             if (newFolders)
                 service.updateOwner(createdReceipt.getOwner());
 
-            System.out.println(createdReceipt.getOwner().getUsername() + " is null?");
             ReceiptResource createdResource = new ReceiptResourceAsm().toResource(createdReceipt);
+            System.out.println(createdResource.getDate());
             HttpHeaders headers = new HttpHeaders();
             headers.setLocation(URI.create(createdResource.getLink("self").getHref()));
+
+//            if (createdReceipt.getPhoto() != null) {
+//
+//            }
+
             return new ResponseEntity<ReceiptResource>(createdResource, headers, HttpStatus.CREATED);
         } catch (ReceiptNotFoundException e) {
             throw new NotFoundException(e);

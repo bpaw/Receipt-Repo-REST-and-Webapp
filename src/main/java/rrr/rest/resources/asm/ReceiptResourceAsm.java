@@ -29,6 +29,7 @@ public class ReceiptResourceAsm extends ResourceAssemblerSupport<Receipt, Receip
         res.setDescription(receipt.getDescription());
         res.setFolders(receipt.getFolders());
         res.setPhoto(receipt.getPhoto());
+        res.setRid(receipt.getId());
         Link link = linkTo(ReceiptController.class).slash(receipt.getId()).withSelfRel();
         res.add(link);
         return res;

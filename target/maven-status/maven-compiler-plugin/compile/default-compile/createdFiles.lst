@@ -1,10 +1,12 @@
 rrr\core\services\util\AccountList.class
 rrr\core\repositories\ReceiptRepo.class
+rrr\third_party\sheets\sheetsUtil.class
 rrr\rest\resources\FoldersResource.class
 rrr\rest\resources\ReceiptListResource.class
 rrr\core\services\impl\ReceiptServiceImpl.class
 rrr\core\repositories\jpa\JpaReceiptRepo.class
 rrr\rest\resources\asm\FoldersResourceAsm.class
+rrr\third_party\firebase\firebaseUtil.class
 rrr\rest\resources\AccountResource.class
 rrr\rest\resources\AccountListResource.class
 rrr\rest\resources\asm\ReceiptListResourceAsm.class
