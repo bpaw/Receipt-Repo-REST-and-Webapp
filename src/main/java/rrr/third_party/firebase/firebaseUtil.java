@@ -7,6 +7,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseCredentials;
 import com.google.firebase.cloud.StorageClient;
+import com.google.firebase.database.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -21,25 +22,32 @@ import static org.apache.http.protocol.HTTP.UTF_8;
 public class firebaseUtil {
 
     public static void main(String[] args) throws IOException {
-        FileInputStream serviceAccount = new FileInputStream("receipttracker-d59f5-firebase-adminsdk-op20c-d2f0d0acda.json");
+        FileInputStream serviceAccount = new FileInputStream("Receipt Repo-3c08f34f874e.json");
 
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredential(FirebaseCredentials.fromCertificate(serviceAccount))
                 .setDatabaseUrl("https://receipttracker-d59f5.firebaseio.com/")
+                .setStorageBucket("receipttracker-d59f5.appspot.com")
                 .build();
 
         FirebaseApp app = FirebaseApp.initializeApp(options);
-        System.out.println("I guess we initialized firebase then?");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Object document = dataSnapshot.getValue();
+                System.out.println(document);
+            }
 
-        Bucket bucket = StorageClient
-                .getInstance(app)
-                .bucket("test");
+            public void onCancelled(DatabaseError databaseError) {
+                System.out.println("Database error listener ref");
+            }
+        });
 
-        Storage storage = bucket.getStorage();
-        System.out.println("Bucket is " + storage.toString());
-        System.out.println("Bucket get policy is " + storage.getIamPolicy(bucket.getName()));
+        Bucket bucket = StorageClient.getInstance().bucket();
+        System.out.println(bucket.toString());
 
+        String blobName = "helloworld";
         InputStream content = new ByteArrayInputStream("Hello, World!".getBytes(UTF_8));
-        Blob blob = bucket.create("hello world", content, "text/plain");
+        Blob blob = bucket.create(blobName, content, "text/plain");
     }
 }
