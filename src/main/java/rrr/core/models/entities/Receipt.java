@@ -38,6 +38,8 @@ public class Receipt {
 
     private URL photo;
 
+    private String photo_bytes;
+
     public String getReceipt() {
         return receipt;
     }
@@ -116,6 +118,14 @@ public class Receipt {
 
     public void setPhoto(URL photo) {
         this.photo = photo;
+    }
+
+    public String getPhoto_bytes() {
+        return photo_bytes;
+    }
+
+    public void setPhoto_bytes(String photo_bytes) {
+        this.photo_bytes = photo_bytes;
     }
 
     public List<String> parseFoldersField() {

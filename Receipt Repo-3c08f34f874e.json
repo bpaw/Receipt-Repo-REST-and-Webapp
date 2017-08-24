@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "receipttracker-d59f5",
+  "private_key_id": "3c08f34f874ef6115c460fea6823ae4f18240210",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC2ibqKzR2fRZ+n\nUal/t6N46mkRrKiETPnINh/V3LexwZ6/amSTNFOdeHyTzmF3TEeR9649o5DYZ29R\nQX1gxkTkpSggki0SVqcp7saXMtTzjHq9/vS4W00ZKUa2Vx9Fuuz4q3mH8OqGXQMr\nBkkqjEwScC98j0aIvZcwZntzgvRao7uUJE/HkJloHuiNmlphX0lvXVjoIc21jgjw\nrJZjbCT65Fe1GDH4mshK6HvSpUTibq1hNAXRU2iiFnAnvuzBKFHwAZCwr3tOmG6s\na6Dkw+fYnZdw4IqLdZXKYP7cYwPO08ydbvfueEPkxbFWWK5tgsiJt/d1B66s86kI\n9bkDnmEfAgMBAAECggEAN1Py02yNrH+lf0k816X5akae90j+wS81zM4/AwtGMJ5v\n+DQO7SGAsKvbEtAM8eSQkvlgenVwC2/6qUXw81rVefpnecvk1nimbYre7eht7K5p\na9pyIckmytgcg1tP8spQVqVfDmnjJDvgIHPkzH0+953Cfv5MkljpETYW+DG60Bfq\nGZi/e2ArQA/z3UB5UGeeX5I33dJwl6iQoLmifqgW63DhowKq2FIA6fDoOxLXmozc\nOMLuIRlXrGSYljQhhMWaQTKuhkB95As54yGSOSDSnoWYMKA485LYBDdW4GRxW+DZ\n+npCds3uhO5SeYQadN76Jhi05D+PX+RpYPg1gfcLAQKBgQDv/drYyFmcQufZkgUN\nFvPleZHG92WpsiwWr7GTg39gX3oLYPDDdoeLm0Wm+P5cSp8RtNmFJ23N19+wf/28\nwvxK0Y0h2kWGpUhA1nVGwIG56HLEwVd0Vknlm1oemJqIgEK7CCCcDfCZzSEaMFMm\nY+9BUB7hCMABtVN+h50vyDIWHwKBgQDCtsjHDsmEFd6/yZ8GSH5jpFb6uFr9o9WE\nGixmJfqtyiqgnPaivzo2MrIlU0TDUV6QRDPoEItxBokwZWUjEXGCaHK491qIwWXo\nbtn54+LD2hASmPOcvbBHNZaespWI7lw073F9jqbY+MKyR0UV5RLmU3IDbyDynGYt\nE+smG2xVAQKBgAxttyG27n0bMeqgl0ZgQ+1EaHpHYapyIbpjCu06yCPzjdx8/rsA\nrnBacDb/ehzJeIdwODufGR6p6Vm4pylZZ7twMsDoDuW0NZO2B4jMe2tnUFpEMQVD\nWrxbWUVwXcBn9Ay/lQC/8A/nAanbitLYJhHZ1l+NFnSAMXzCBS/uTDm9AoGAd+or\n4nOX5XG2mfSorCzvMZxfOM9askQ41b9swof3RxpvgDTKq9YLGp/EGLqcaZFuJHjs\nYqn1xmjZCmYXkC5I8qAyrvke14QLp8bFFWGkISvlpB5wQYKM0n4NQbUH5KmvPaaN\nBV9aH9urxDGiOWa3agPP/o9tAh0RzActVW2kHQECgYAKkD8FTSTzsHnN9dD759r4\nvqkNo10jYDDlKAbEBXYBGZrQBUEy1PSdv63tymjgnpLd/6qCoTCoHmKd1Aqji5qw\nC6yUj4rHjt5B8LPkVP79/E3ryALAd31sYZNKtoTUrHlNnqTADruR40+6D13k5Qcj\n3yqTRNPhWTv3i1fEAgwGjw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "editor-and-storage@receipttracker-d59f5.iam.gserviceaccount.com",
+  "client_id": "114723394517421851739",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/editor-and-storage%40receipttracker-d59f5.iam.gserviceaccount.com"
+}

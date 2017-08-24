@@ -1,10 +1,12 @@
 package rrr.rest.mvc;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.*;
 import rrr.core.models.entities.Receipt;
 import rrr.core.services.ReceiptService;
@@ -15,8 +17,11 @@ import rrr.rest.resources.ReceiptListResource;
 import rrr.rest.resources.ReceiptResource;
 import rrr.rest.resources.asm.ReceiptListResourceAsm;
 import rrr.rest.resources.asm.ReceiptResourceAsm;
+import rrr.third_party.firebase.firebaseUtil;
 
+import java.io.IOException;
 import java.net.URI;
+import java.util.Base64;
 
 /**
  * Created by Brandon Paw on 7/14/2017.
@@ -27,8 +32,10 @@ public class ReceiptController {
 
     private ReceiptService service;
 
+    private firebaseUtil fbUtil= new firebaseUtil();
+
     @Autowired
-    public ReceiptController(ReceiptService service) {
+    public ReceiptController(ReceiptService service) throws IOException {
         this.service = service;
     }
 
@@ -103,6 +110,20 @@ public class ReceiptController {
 
             if (newFolders)
                 service.updateOwner(createdReceipt.getOwner());
+
+            if (sentReceipt.getPhoto_bytes() != null) {
+                String cleaned = sentReceipt.getPhoto_bytes().replace("\\","");
+                byte[] encoded = Base64.getMimeDecoder().decode(cleaned);
+
+//                byte[] encoded = Base64Utils.decodeFromString(cleaned);
+//                ObjectMapper mapper = new ObjectMapper();
+//                byte[] encoded = mapper.convertValue(sentReceipt.getPhoto_bytes(), byte[].class);
+                try {
+                    fbUtil.addPhoto(Long.toString(accountId), Long.toString(createdReceipt.getId()), encoded);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
             ReceiptResource createdResource = new ReceiptResourceAsm().toResource(createdReceipt);
             System.out.println(createdResource.getDate());
