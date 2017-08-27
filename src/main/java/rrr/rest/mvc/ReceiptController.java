@@ -112,10 +112,11 @@ public class ReceiptController {
                 service.updateOwner(createdReceipt.getOwner());
 
             if (sentReceipt.getPhoto_bytes() != null) {
+                System.out.println(sentReceipt.getPhoto_bytes());
                 String cleaned = sentReceipt.getPhoto_bytes().replace("\\","");
-                byte[] encoded = Base64.getMimeDecoder().decode(cleaned);
+//                byte[] encoded = Base64.getMimeDecoder().decode(cleaned);
 
-//                byte[] encoded = Base64Utils.decodeFromString(cleaned);
+                byte[] encoded = Base64Utils.decodeFromString(sentReceipt.getPhoto_bytes());
 //                ObjectMapper mapper = new ObjectMapper();
 //                byte[] encoded = mapper.convertValue(sentReceipt.getPhoto_bytes(), byte[].class);
                 try {
