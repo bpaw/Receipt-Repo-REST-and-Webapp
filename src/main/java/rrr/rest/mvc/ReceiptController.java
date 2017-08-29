@@ -98,7 +98,8 @@ public class ReceiptController {
             if (sentReceipt.getDate() != null) {
                 System.out.println(sentReceipt.getDate());
                 System.out.println(sentReceipt.getDate().indexOf('T'));
-                sentReceipt.setDate(sentReceipt.getDate().substring(0, sentReceipt.getDate().indexOf('T')));
+                if (sentReceipt.getDate().indexOf('T') != -1)
+                    sentReceipt.setDate(sentReceipt.getDate().substring(0, sentReceipt.getDate().indexOf('T')));
                 System.out.println(sentReceipt.getDate());
             }
             Receipt rec = sentReceipt.toReceipt();
@@ -120,14 +121,16 @@ public class ReceiptController {
 //                ObjectMapper mapper = new ObjectMapper();
 //                byte[] encoded = mapper.convertValue(sentReceipt.getPhoto_bytes(), byte[].class);
                 try {
-                    fbUtil.addPhoto(Long.toString(accountId), Long.toString(createdReceipt.getId()), encoded);
+                    String relativeLink = fbUtil.addPhoto(Long.toString(accountId), Long.toString(createdReceipt.getId()), encoded);
+                    createdReceipt.setPhoto(relativeLink);
+                    System.out.println("The firebase storage relative link is " + createdReceipt.getPhoto());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
 
             ReceiptResource createdResource = new ReceiptResourceAsm().toResource(createdReceipt);
-            System.out.println(createdResource.getDate());
+            System.out.println("createdResource has photo field of : " + createdResource.getPhoto());
             HttpHeaders headers = new HttpHeaders();
             headers.setLocation(URI.create(createdResource.getLink("self").getHref()));
 

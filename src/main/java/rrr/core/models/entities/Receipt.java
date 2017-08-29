@@ -36,7 +36,7 @@ public class Receipt {
 
     private String folders;
 
-    private URL photo;
+    private String photo;
 
     private String photo_bytes;
 
@@ -112,11 +112,11 @@ public class Receipt {
         this.folders = folders;
     }
 
-    public URL getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(URL photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 

@@ -29,7 +29,7 @@ public class ReceiptResource extends ResourceSupport {
 
     private String folders;
 
-    private URL photo;
+    private String photo;
 
     private String photo_bytes;
 
@@ -97,11 +97,11 @@ public class ReceiptResource extends ResourceSupport {
         this.folders = folders;
     }
 
-    public URL getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(URL photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 

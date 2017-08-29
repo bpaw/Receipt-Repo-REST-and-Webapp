@@ -71,13 +71,13 @@ public class firebaseUtil {
         return baos.toByteArray();
     }
 
-    public static boolean addPhoto(String accountId, String receiptId, byte[] pic) throws IOException {
+    public static String addPhoto(String accountId, String receiptId, byte[] pic) throws IOException {
         System.out.println("Adding photo!!!");
         String blobName = "user/" + accountId + "/" + receiptId;
 //        FileInputStream content = new FileInputStream("brandon_paw_resume.pdf");
 //        byte[] pdf = pdfToByteArray("brandon_paw_resume.pdf");
         Blob blob = bucket.create(blobName, pic, "image/jpg");
-        return false;
+        return blobName;
     }
 
     public static void main(String[] args) throws IOException {
