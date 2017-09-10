@@ -104,6 +104,17 @@ public class AccountController {
         return new ResponseEntity<>(account.parseFoldersField(), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/details/{accountId}", method = RequestMethod.GET)
+    public ResponseEntity<List<Integer>> getDetails(@PathVariable Long accountId) {
+        Account account = accountService.findAccount(accountId);
+        List<String> folderList = account.parseFoldersField();
+        ReceiptList receiptList = accountService.findReceiptsByAccount(accountId);
+        int numFolders = folderList == null ? 0 : folderList.size();
+        int numReceipts = receiptList == null || receiptList.getReceipts() == null ? 0 : receiptList.getReceipts().size();
+        List<Integer> details = Arrays.asList(numFolders, numReceipts);
+        return new ResponseEntity<>(details, HttpStatus.OK);
+    }
+
 //    @RequestMapping(value="/{accountId}/blogs",
 //            method = RequestMethod.POST)
 //    public ResponseEntity<BlogResource> createBlog(
